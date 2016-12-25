@@ -52,9 +52,11 @@
     <Compile Include="CacheFunctionExecutionHandler.cs" />
     <Compile Include="ExampleAddIn.cs" />
     <Compile Include="AsyncFunctionExamples.cs" />
+    <Compile Include="ObjectHandleCache.cs" />
     <Compile Include="FunctionExecutionHandlerExamples.cs" />
     <Compile Include="FunctionLoggingHandler.cs" />
     <Compile Include="InstanceMemberRegistration.cs" />
+    <Compile Include="ObjectHandleExamples.cs" />
     <Compile Include="ParameterConversionExamples.cs" />
     <Compile Include="ParamsFunctionExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -75,6 +75,8 @@ namespace Registration.Sample
 
             var paramConversionConfig = new ParameterConversionConfiguration()
 
+                .AddHandleConversions()
+
                 // Register the Standard Parameter Conversions (with the optional switch on how to treat references to empty cells)
                 .AddParameterConversion(ParameterConversions.GetOptionalConversion(treatEmptyAsMissing: true))
 
@@ -109,7 +111,8 @@ namespace Registration.Sample
                 .AddFunctionExecutionHandler(FunctionLoggingHandler.LoggingHandlerSelector)
                 .AddFunctionExecutionHandler(CacheFunctionExecutionHandler.CacheHandlerSelector)
                 .AddFunctionExecutionHandler(TimingFunctionExecutionHandler.TimingHandlerSelector)
-                .AddFunctionExecutionHandler(SuppressInDialogFunctionExecutionHandler.SuppressInDialogSelector);
+                .AddFunctionExecutionHandler(SuppressInDialogFunctionExecutionHandler.SuppressInDialogSelector)
+                .AddFunctionExecutionHandler(ObjectHandleCache.ObjectHandleTrackingSelector);
         }
 
         public void AutoClose()
